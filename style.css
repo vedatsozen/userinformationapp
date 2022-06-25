@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+
+margin: auto;
+background-color: beige;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+
+}
+
+#top {
+    margin: auto;
+    height: 8vh;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    
+}
+
+#logo {
+    margin: auto;
+    height: 100%;
+    width: 50%;
+    padding:7px;
+}
+
+#buttons {
+    margin: auto;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#table {
+    margin: auto;
+    border: 1px solid red;
+    
+}
+
+
+
+table tr td {
+    padding-right: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 60px;
+    padding: 3px;
+    text-align: center;
+}
+
+table tr td:hover {
+    text-decoration: underline;
+    padding: 3px;
+}
+
+#container {
+
+height:92vh;
+width: 100vw;
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+}
+
+#left {
+
+margin: auto;
+height: 100%;
+width: 30%;
+text-align: center;
+background-color:beige;
+padding-top: 20px;
+
+}
+
+#middle {
+
+    margin: auto;
+    height: 100%;
+    width: 40%;   
+    display: flex;
+    flex-direction: column;
+
+    }
+
+    #middletop {
+
+            margin: auto;
+            height: 49%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+    }
+
+    #middletopleft {
+        margin: auto;
+        height: 100%;
+        width:49%;
+        padding: 15px;
+        font-size:18;
+        color: darkred;
+        box-sizing: border-box;
+        
+      
+      
+      
+    }
+
+    #middletopright {
+        margin: auto;
+        height: 100%;
+        width:49%;
+       
+       
+    
+    }
+
+    #middlebottom {
+
+        margin: auto;
+        height: 49%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+       
+    
+
+}
+
+#middlebottomleft {
+    margin: auto;
+    height: 100%;
+    width:49%;
+    
+   
+    
+}
+
+#middlebottomright {
+    margin: auto;
+    height: 100%;
+    width: 49%;
+    
+
+ 
+   
+    
+}
+
+
+
+    #right {
+
+        margin: auto;
+        height: 100%;
+        width: 30%;   
+        background-color: beige;
+        padding: 20px;
+        color: darkred;
+        font-size:300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        }
+
+.divs {
+
+    box-sizing: border-box;
+}
+
+p { 
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    background-color: darkred;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 3px;
+    width: fit-content;
+}
+
+img.profilfoto {
+    margin: auto;
+    margin-top: 20px;
+    height: 30%;
+    width: 45%;
+    border-radius: 50%;
+    border: 2px solid white;
+    
+}
+
+p.hobby, p.skills,p.socialmedia {
+
+    margin-top: 30px;
+    color: white;
+    font-size: 40px;
+   
+}
+
+p#name {
+
+font-size: 40px;
+
+}
+
+.theme {
+    cursor: pointer;
+}
+
+
+
+.theme:active {
+    transform: scale(0.95);
+}
+
+
+.square {
+    background-color:beige;
+    border: 3px solid darkred;
+    border-radius: 3px;
+}
+
+p.shortcv {
+    font-size: 30px;
+}
+
+h1.dashboard {
+    margin: auto;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin-left:10px;
+}
+
+img.imgsquare {
+
+    margin: auto;
+    height:35px;
+    width:35px;
+    margin-right: 20px;
+    background-color: white;
+    border:3px solid white;
+    box-shadow: 3px 3px 3px black;
+    cursor: pointer;
+    
+}
+
+
+img.imgsquare:active {
+    transform: scale(0.95);
+}
+
+img.socialmedia {
+    height: 50px;
+    width: 50px;
+    background-color: beige;
+    border:1px solid beige;
+}
+
+img#profilfoto {
+    margin: auto;
+    height:40%;
+    width:auto;
+    box-sizing: border-box;
+    border-radius:50%;
+    border: 5px solid darkred;
+   
+}
+
+img#profilfoto:hover {
+
+cursor: pointer;
+border: 10px solid gold;
+
+}
+
+#darkbutton {
+    margin: auto;
+    margin-right: 10px;
+    
+}
+
+#lightbutton {
+    margin: auto;
+    margin-right: 10px;
+    
+ 
+}
+
+#selectid {
+    margin: auto;
+    margin-left: 10px;
+    background: beige;
+    color: darkred;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+   
+}
+
+button.submit {
+    margin: auto;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: darkred;
+    color: beige;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+button.submit:active {
+    transform: scale(0.95);
+}
+
+p:hover {
+    background-color: gold;
+}

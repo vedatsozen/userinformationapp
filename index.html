@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="members.js"></script>
+</head>
+<body>
+<div id="top">
+    
+    <div id="logo">
+
+        <select id="selectid">
+            <option value="Vedat Sözen">Vedat Sözen</option>
+            <option value="Brad Pitt">Brad Pitt</option>
+           
+        </select>
+
+        <button type="submit" class="submit" onclick="showresult()">Show Details of Member</button>
+    
+    </div>
+
+    <div id="buttons">
+        <table>
+            <tr>
+                <td id="dark">Dark</td><td id="light">Light</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<div id="container">
+
+<!-- LEFT DIV -->
+
+<div id="left" class="divs">
+
+<img id="profilfoto">
+<p id="name"></p>
+<p id="age"></p>
+<p id="job"></p>
+<p id="blood"></p>
+<p id="language"></p>
+<p id="country"></p>
+
+
+
+</div>
+
+<!-- MIDDLE DIV -->
+
+<div id="middle" class="divs">
+
+<div id="middletop">
+
+    <div id="middletopleft" class="square">
+   
+    </div>
+
+    <div id="middletopright" class="square">
+        <p class="skills">Skills</p>
+        <p id="firstskill"></p>
+        <p id="secondskill"></p>
+        <p id="thirdskill"></p>
+    </div>
+
+   
+   
+</div>
+
+<div id="middlebottom">
+
+    <div id="middlebottomleft" class="square">
+        <p class="hobby">Hobbies</p>
+        <p id="firsthobby"></p>
+        <p id="secondhobby"></p>
+        <p id="thirdhobby"></p>
+    </div>
+
+    <div id="middlebottomright" class="square">
+        <p class="socialmedia">Social Media</p>
+        <p id="twitteraccount"></p>
+        <p id="githubaccount"></p>
+        <p id="codepenaccount"></p>
+    </div>
+
+   
+</div>
+
+</div>
+
+<!-- RIGHT DIV -->
+
+<div id="right" class="divs"></div>
+
+</div> 
+
+</body>
+
+<script>
+
+const memberProfilImage = document.getElementById("profilfoto");
+const memberName = document.getElementById("name") ;
+const memberSurname = document.getElementById("surname");
+const memberAge = document.getElementById("age");
+const memberJob = document.getElementById("job");
+const memberBlood = document.getElementById("blood");
+const memberLanguage = document.getElementById("language");
+const memberCountry = document.getElementById("country");
+
+memberProfilImage.src = members[0].source;
+memberName.innerHTML = members[0].name + " " + members[0].surname ;
+memberAge.innerHTML = "Age : " + members[0].age ;
+memberJob.innerHTML = "Job : " + members[0].job ;
+memberBlood.innerHTML = "Blood : " + members[0].blood ;
+memberLanguage.innerHTML = "Language : " + members[0].language ;
+memberCountry.innerHTML = "Country : " + members[0].country ;
+
+const firstSkill = document.getElementById("firstskill");
+const secondSkill = document.getElementById("secondskill") ;
+const thirdSkill = document.getElementById("thirdskill") ;
+firstSkill.innerHTML = members[0].skills[0];
+secondSkill.innerHTML = members[0].skills[1];
+thirdSkill.innerHTML = members[0].skills[2];
+
+const firstHobby = document.getElementById("firsthobby");
+const secondHobby = document.getElementById("secondhobby") ;
+const thirdHobby = document.getElementById("thirdhobby") ;
+firstHobby.innerHTML = members[0].hobbies[0];
+secondHobby.innerHTML = members[0].hobbies[1];
+thirdHobby.innerHTML = members[0].hobbies[2];
+
+const twitter = document.getElementById("twitteraccount");
+const github = document.getElementById("githubaccount") ;
+const codepen = document.getElementById("codepenaccount");
+twitter.innerHTML = "Twitter";
+github.innerHTML = "Github";
+codepen.innerHTML = "Codepen";
+
+document.getElementById("middletopleft").innerHTML = members[0].shortcv ;
+
+document.getElementById("right").innerHTML = "VS" ;
+
+function showresult() {
+
+const memberValue = document.getElementById("selectid").value;
+
+if ( memberValue == "Vedat Sözen" ) {
+
+document.getElementById("middletopleft").innerHTML = members[0].shortcv ;
+
+document.getElementById("right").innerHTML = "V" ;
+
+const memberName = document.getElementById("name") ;
+const memberSurname = document.getElementById("surname");
+const memberAge = document.getElementById("age");
+const memberJob = document.getElementById("job");
+const memberBlood = document.getElementById("blood");
+const memberLanguage = document.getElementById("language");
+const memberCountry = document.getElementById("country");
+
+
+memberName.innerHTML = members[0].name + " " + members[0].surname ;
+memberAge.innerHTML = "Age : " + members[0].age ;
+memberJob.innerHTML = "Job : " + members[0].job ;
+memberBlood.innerHTML = "Blood : " + members[0].blood ;
+memberLanguage.innerHTML = "Language : " + members[0].language ;
+memberCountry.innerHTML = "Country : " + members[0].country ;
+
+document.getElementById("profilfoto").src = members[0].source;
+
+const firstSkill = document.getElementById("firstskill");
+const secondSkill = document.getElementById("secondskill") ;
+const thirdSkill = document.getElementById("thirdskill") ;
+firstSkill.innerHTML = members[0].skills[0];
+secondSkill.innerHTML = members[0].skills[1];
+thirdSkill.innerHTML = members[0].skills[2];
+
+const firstHobby = document.getElementById("firsthobby");
+const secondHobby = document.getElementById("secondhobby") ;
+const thirdHobby = document.getElementById("thirdhobby") ;
+firstHobby.innerHTML = members[0].hobbies[0];
+secondHobby.innerHTML = members[0].hobbies[1];
+thirdHobby.innerHTML = members[0].hobbies[2];
+
+const twitter = document.getElementById("twitteraccount");
+const github = document.getElementById("githubaccount") ;
+const codepen = document.getElementById("codepenaccount");
+twitter.innerHTML = "Twitter";
+github.innerHTML = "Github";
+codepen.innerHTML = "Codepen";
+
+}
+
+else if ( memberValue == "Brad Pitt" ) {
+
+document.getElementById("right").innerHTML = "BP" ;
+
+document.getElementById("middletopleft").innerHTML = members[1].shortcv ;
+
+const memberName = document.getElementById("name") ;
+const memberSurname = document.getElementById("surname");
+const memberAge = document.getElementById("age");
+const memberJob = document.getElementById("job");
+const memberBlood = document.getElementById("blood");
+const memberLanguage = document.getElementById("language");
+const memberCountry = document.getElementById("country");
+
+
+memberName.innerHTML = members[1].name + " " + members[1].surname ;
+memberAge.innerHTML = "Age : " + members[1].age ;
+memberJob.innerHTML = "Job : " + members[1].job ;
+memberBlood.innerHTML = "Blood : " + members[1].blood ;
+memberLanguage.innerHTML = "Language : " + members[1].language ;
+memberCountry.innerHTML = "Country : " + members[1].country ;
+
+document.getElementById("profilfoto").src = members[1].source;
+
+const firstSkill = document.getElementById("firstskill");
+const secondSkill = document.getElementById("secondskill") ;
+const thirdSkill = document.getElementById("thirdskill") ;
+firstSkill.innerHTML = members[1].skills[0];
+secondSkill.innerHTML = members[1].skills[1];
+thirdSkill.innerHTML = members[1].skills[2];
+
+const firstHobby = document.getElementById("firsthobby");
+const secondHobby = document.getElementById("secondhobby") ;
+const thirdHobby = document.getElementById("thirdhobby") ;
+firstHobby.innerHTML = members[1].hobbies[0];
+secondHobby.innerHTML = members[1].hobbies[1];
+thirdHobby.innerHTML = members[1].hobbies[2];
+
+const twitter = document.getElementById("twitteraccount");
+const github = document.getElementById("githubaccount") ;
+const codepen = document.getElementById("codepenaccount");
+twitter.innerHTML = "Twitter";
+github.innerHTML = "Github";
+codepen.innerHTML = "Codepen";
+
+}
+
+}
+
+
+
+
+const darktheme = document.getElementById("dark");
+const lighttheme = document.getElementById("light");
+
+darktheme.addEventListener("click", function() {
+
+document.getElementById("left").style.backgroundColor = "black";
+document.getElementById("right").style.backgroundColor = "black";
+document.getElementById("right").style.color = "darkred";
+document.getElementById("middletopleft").style.backgroundColor = "black";
+document.getElementById("middletopright").style.backgroundColor = "black";
+document.getElementById("middlebottomleft").style.backgroundColor = "black";
+document.getElementById("middlebottomright").style.backgroundColor = "black";
+document.body.style.backgroundColor = "black";
+})
+
+lighttheme.addEventListener("click", function() {
+
+document.getElementById("left").style.backgroundColor = "beige";
+document.getElementById("right").style.backgroundColor = "beige";
+document.getElementById("right").style.color = "darkred";
+document.getElementById("middletopleft").style.backgroundColor = "beige";
+document.getElementById("middletopright").style.backgroundColor = "beige";
+document.getElementById("middlebottomleft").style.backgroundColor = "beige";
+document.getElementById("middlebottomright").style.backgroundColor = "beige";
+document.body.style.backgroundColor = "beige";
+
+})
+
+
+
+
+
+</script>
+</html>
